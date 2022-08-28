@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dfe1ee;
+}
+
+.body__container {
+    font-weight: 600;
+    max-width: 700px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.body__header {
+    font-size: 40px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
