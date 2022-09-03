@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="images/share.png">
-    <link rel="icon" href="images/icon.png">
+    <meta property="og:image" content="images/share.png" />
+    <link rel="icon" href="images/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,15 +26,16 @@
   </head>
 
   <body class="body">
-    <div class="body__container">
-      <h1 class="body__header">Kalkulator walut</h1>
-
+    <header class="header">
+      <h1 class="header__title">Kalkulator walut</h1>
+    </header>
+    <main class="container">
       <form action="" class="form js-form">
         <fieldset class="form__fieldset">
           <legend class="form__legend">Wybór walut:</legend>
           <label>
             <span class="form__inputLabel">Waluta do wymiany:</span>
-            <select name="initialCurrency" class="initialCurrency">
+            <select name="initialCurrency" class="js-initialCurrency">
               <option value="EUR">EUR Euro</option>
               <option value="PLN">PLN Złoty polski</option>
               <option value="CAD">CAD Dolar kanadyjski</option>
@@ -43,9 +44,9 @@
           </label>
           <label>
             <span class="form__inputLabel">Waluta docelowa:</span>
-            <select name="finalCurrency" class="finalCurrency">
-              <option value="EUR">EUR Euro</option>
+            <select name="finalCurrency" class="js-finalCurrency">
               <option value="PLN">PLN Złoty polski</option>
+              <option value="EUR">EUR Euro</option>
               <option value="CAD">CAD Dolar kanadyjski</option>
               <option value="HRK">HRK Kuna chorwacka</option>
             </select>
@@ -65,20 +66,20 @@
           </label>
           <label>
             <span class="form__inputLabel">Kwota po przeliczeniu:</span>
-            <input class="js-output" value="0" readonly /><button
-              type="reset"
-              class="form__button"
-            >
+            <input class="js-output" value="0" readonly /><button type="reset"
+              class="form__button">
               Wyczyść kalkulator
             </button>
           </label>
         </fieldset>
       </form>
-    </div>
+    </main>
   </body>
   <footer>
     <div class="footer">
-        Kalkulator walut - wersja testowa - kursy walut aktualne na dzień 28/08/2022 <p>&copy; Konrad Legęć 2022</p>
+      Kalkulator walut - wersja testowa - kursy walut aktualne na dzień
+      28/08/2022
+      <p>&copy; Konrad Legęć 2022</p>
     </div>
   </footer>
 </html>
