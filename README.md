@@ -9,11 +9,15 @@ form.addEventListener("submit", (e) => {
 
   switch (initialCurrency.value) {
     case "EUR":
-      if (finalCurrency.value === "EUR") result = amountVal;
-      else if (finalCurrency.value === "PLN") result = amountVal * EURtoPLN;
-      else if (finalCurrency.value === "CAD") result = amountVal * EURtoCAD;
-      else if (finalCurrency.value === "HRK") result = amountVal * EURtoHRK;
-      break;
+      switch (finalCurrency.value) {
+        case "PLN": result = amountVal * EURtoPLN;
+        break;
+        case "CAD": result = amountVal * EURtoCAD;
+        break;
+        case "HRK": result = amountVal * EURtoHRK; 
+        break;
+        case "EUR": result = amountVal;
+      }
  ```
 
 ## Data source
