@@ -20,70 +20,57 @@
       case "EUR":
         switch (finalCurrency.value) {
           case "PLN":
-            result = amountVal() * EURtoPLN;
-            break;
+            return amountVal() * EURtoPLN;
           case "CAD":
-            result = amountVal() * EURtoCAD;
-            break;
+            return amountVal() * EURtoCAD;
           case "HRK":
-            result = amountVal() * EURtoHRK;
-            break;
+            return amountVal() * EURtoHRK;
           case "EUR":
-            result = amountVal();
+            return amountVal();
         }
-        break;
+
       case "PLN":
         switch (finalCurrency.value) {
           case "PLN":
-            result = amountVal();
-            break;
+            return amountVal();
           case "CAD":
-            result = amountVal() / CADtoPLN;
-            break;
+            return amountVal() / CADtoPLN;
           case "HRK":
-            result = amountVal() * PLNtoHRK;
-            break;
+            return amountVal() * PLNtoHRK;
           case "EUR":
-            result = amountVal() / EURtoPLN;
+            return amountVal() / EURtoPLN;
         }
-        break;
+
       case "CAD":
         switch (finalCurrency.value) {
           case "PLN":
-            result = amountVal() * CADtoPLN;
-            break;
+            return amountVal() * CADtoPLN;
           case "CAD":
-            result = amountVal();
-            break;
+            return amountVal();
           case "HRK":
-            result = amountVal() * CADtoHRK;
-            break;
+            return amountVal() * CADtoHRK;
           case "EUR":
-            result = amountVal() / EURtoCAD;
+            return amountVal() / EURtoCAD;
         }
-        break;
+
       case "HRK":
         switch (finalCurrency.value) {
           case "PLN":
-            result = amountVal() / PLNtoHRK;
-            break;
+            return amountVal() / PLNtoHRK;
           case "CAD":
-            result = amountVal() / CADtoHRK;
-            break;
+            return amountVal() / CADtoHRK;
           case "HRK":
-            result = amountVal();
-            break;
+            return amountVal();
           case "EUR":
-            result = amountVal() / EURtoHRK;
+            return  amountVal() / EURtoHRK;
         }
     }
-    return result;
   };
-
+  
   form.addEventListener("submit", (e) => {
     const output = document.querySelector(".js-output");
     e.preventDefault();
-    calculateResult();
+    const result = calculateResult();
     output.value = result.toFixed(2);
   });
 };
